@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Progress Lari Pemula</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+      padding:20px;
+      line-height:1.6;
+    }
+
+    .container{
+      max-width:900px;
+      margin:auto;
+    }
+
+    h1{
+      font-size:2.2rem;
+      margin-bottom:10px;
+    }
+
+    .desc{
+      color:#cbd5e1;
+      margin-bottom:25px;
+    }
+
+    .progress-box{
+      background:#1e293b;
+      border:1px solid #334155;
+      padding:20px;
+      border-radius:16px;
+      margin-bottom:25px;
+    }
+
+    .progress-bar{
+      width:100%;
+      height:18px;
+      background:#0f172a;
+      border-radius:999px;
+      overflow:hidden;
+      margin-top:10px;
+    }
+
+    .progress-fill{
+      height:100%;
+      width:0%;
+      background:#38bdf8;
+      transition:0.3s;
+    }
+
+    .week{
+      background:#1e293b;
+      border:1px solid #334155;
+      border-radius:16px;
+      padding:20px;
+      margin-bottom:20px;
+    }
+
+    .week h2{
+      color:#38bdf8;
+      margin-bottom:10px;
+    }
+
+    .week p{
+      color:#cbd5e1;
+      margin-bottom:15px;
+    }
+
+    ul{
+      list-style:none;
+    }
+
+    li{
+      background:#0f172a;
+      border:1px solid #334155;
+      border-radius:12px;
+      padding:15px;
+      margin-bottom:12px;
+      transition:0.2s;
+    }
+
+    .task{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+    }
+
+    .task input{
+      transform:scale(1.3);
+      margin-top:4px;
+      cursor:pointer;
+    }
+
+    .completed{
+      opacity:0.6;
+      text-decoration:line-through;
+    }
+
+    .tips{
+      background:#082f49;
+      padding:20px;
+      border-radius:16px;
+      margin-top:20px;
+    }
+
+    .tips h3{
+      margin-bottom:10px;
+      color:#7dd3fc;
+    }
+
+    @media(max-width:600px){
+      h1{
+        font-size:1.7rem;
+      }
+
+      body{
+        padding:14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Progress Lari Pemula 30 Hari</h1>
+
+  <p class="desc">
+    Program ini cocok untuk pemula yang:
+    <br><br>
+    • Belum pernah rutin olahraga<br>
+    • Perut masih buncit<br>
+    • Cepat ngos-ngosan<br>
+    • Mau mulai sehat pelan-pelan
+  </p>
+
+  <div class="progress-box">
+    <strong>Progress Program</strong>
+
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <p id="progressText" style="margin-top:10px;color:#cbd5e1;">
+      0% selesai
+    </p>
+  </div>
+
+  <div class="week">
+    <h2>Minggu 1 — Adaptasi Tubuh</h2>
+
+    <p>
+      Fokus minggu pertama:
+      membiasakan tubuh bergerak dan adaptasi napas.
+    </p>
+
+    <ul>
+
+      <li class="task-item">
+        <div class="task">
+          <input type="checkbox" class="check">
+          <div>
+            <strong>Hari 1</strong><br>
+            Jalan santai 5 menit<br>
+            Lari pelan 1 menit<br>
+            Jalan cepat 3 menit<br>
+            Ulang 5 kali
+          </div>
+        </div>
+      </li>
+
+      <li class="task-item">
+        <div class="task">
+          <input type="checkbox" class="check">
+          <div>
+            <strong>Hari 2</strong><br>
+            Istirahat total
+          </div>
+        </div>
+      </li>
+
+      <li class="task-item">
+        <div class="task">
+          <input type="checkbox" class="check">
+          <div>
+            <strong>Hari 3</strong><br>
+            Ulangi Hari 1
+          </div>
+        </div>
+      </li>
+
+      <li class="task-item">
+        <div class="task">
+          <input type="checkbox" class="check">
+          <div>
+            <strong>Hari 4</strong><br>
+            Istirahat
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="week">
+    <h2>Minggu 2 — Mulai Kuat</h2>
+
+    <p>
+      Mulai tambah durasi lari sedikit demi sedikit.
+    </p>
+
+    <ul>
+
+      <li class="task-item">
+        <div class="task">
+          <input type="checkbox" class="check">
+          <div>
+            <strong>Hari 8</strong><br>
+            Lari 2 menit<br>
+            Jalan 2 menit<br>
+            Ulang 5 kali
+          </div>
+        </div>
+      </li>
+
+      <li class="task-item">
+        <div class="task">
+          <input type="checkbox" class="check">
+          <div>
+            <strong>Hari 9</strong><br>
+            Istirahat
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+
+  <div class="tips">
+    <h3>Tips Penting</h3>
+
+    • Jangan sprint<br>
+    • Fokus konsisten<br>
+    • Minum cukup<br>
+    • Kalau lutut sakit, kurangi pace<br>
+    • Jalan cepat tetap bagus buat bakar lemak
+  </div>
+
+</div>
+
+<script>
+
+const checks = document.querySelectorAll(".check");
+const progressFill = document.getElementById("progressFill");
+const progressText = document.getElementById("progressText");
+
+function updateProgress(){
+
+  let total = checks.length;
+  let checked = 0;
+
+  checks.forEach((check,index)=>{
+
+    const saved = localStorage.getItem("lari-"+index);
+
+    if(saved === "true"){
+      check.checked = true;
+      check.closest(".task-item").classList.add("completed");
+    }
+
+    if(check.checked){
+      checked++;
+    }
+
+    check.addEventListener("change",()=>{
+
+      localStorage.setItem("lari-"+index,check.checked);
+
+      if(check.checked){
+        check.closest(".task-item").classList.add("completed");
+      }else{
+        check.closest(".task-item").classList.remove("completed");
+      }
+
+      refresh();
+    });
+
+  });
+
+  refresh();
+}
+
+function refresh(){
+
+  let total = checks.length;
+  let done = document.querySelectorAll(".check:checked").length;
+
+  let percent = Math.round((done/total)*100);
+
+  progressFill.style.width = percent + "%";
+
+  progressText.innerText =
+    done + " / " + total + " selesai (" + percent + "%)";
+}
+
+updateProgress();
+
+</script>
+
+</body>
+</html>
